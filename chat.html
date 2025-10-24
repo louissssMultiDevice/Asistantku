@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat dengan Doetoez - AI Assistant</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/chat.css">
+</head>
+<body class="chat-layout">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <span class="logo-text">Doetoez</span>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Beranda</a>
+                <a href="chat.html" class="nav-link active">Chat</a>
+                <a href="docs.html" class="nav-link">API Docs</a>
+                <div class="user-menu">
+                    <div class="user-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <span class="user-name">Guest</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="chat-container">
+        <!-- Sidebar -->
+        <div class="chat-sidebar">
+            <div class="sidebar-header">
+                <button class="btn btn-primary btn-new-chat">
+                    <i class="fas fa-plus"></i>
+                    Chat Baru
+                </button>
+                <button class="sidebar-toggle">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+            </div>
+
+            <div class="conversation-list">
+                <div class="conversation-item active">
+                    <div class="conversation-icon">
+                        <i class="fas fa-comment"></i>
+                    </div>
+                    <div class="conversation-content">
+                        <div class="conversation-title">Pembahasan Projek Website</div>
+                        <div class="conversation-preview">Bisa bantu buat kode React component?</div>
+                        <div class="conversation-meta">
+                            <span class="conversation-time">Hari ini, 14:30</span>
+                            <span class="conversation-count">24 pesan</span>
+                        </div>
+                    </div>
+                    <button class="conversation-actions">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </button>
+                </div>
+
+                <div class="conversation-item">
+                    <div class="conversation-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="conversation-content">
+                        <div class="conversation-title">Bantuan Kode JavaScript</div>
+                        <div class="conversation-preview">Error di function async...</div>
+                        <div class="conversation-meta">
+                            <span class="conversation-time">Kemarin, 10:15</span>
+                            <span class="conversation-count">18 pesan</span>
+                        </div>
+                    </div>
+                    <button class="conversation-actions">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </button>
+                </div>
+
+                <div class="conversation-item">
+                    <div class="conversation-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="conversation-content">
+                        <div class="conversation-title">Curhat Masalah Kerja</div>
+                        <div class="conversation-preview">Hari ini meeting dengan client...</div>
+                        <div class="conversation-meta">
+                            <span class="conversation-time">12 Okt, 19:45</span>
+                            <span class="conversation-count">32 pesan</span>
+                        </div>
+                    </div>
+                    <button class="conversation-actions">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="sidebar-footer">
+                <div class="memory-status">
+                    <div class="memory-info">
+                        <span>Memori: 65% terpakai</span>
+                        <div class="memory-bar">
+                            <div class="memory-progress" style="width: 65%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="user-profile">
+                    <div class="profile-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="profile-info">
+                        <div class="profile-name">Guest User</div>
+                        <div class="profile-plan">Free Plan</div>
+                    </div>
+                    <button class="profile-settings">
+                        <i class="fas fa-cog"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Chat Area -->
+        <div class="chat-main">
+            <div class="chat-header">
+                <div class="chat-info">
+                    <div class="chat-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="chat-details">
+                        <div class="chat-title">Doetoez AI Assistant</div>
+                        <div class="chat-status">
+                            <span class="status-indicator online"></span>
+                            Online - Siap membantu Anda
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-actions">
+                    <button class="action-btn" title="Clear Chat">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                    <button class="action-btn" title="Share Chat">
+                        <i class="fas fa-share"></i>
+                    </button>
+                    <button class="action-btn" title="Settings">
+                        <i class="fas fa-cog"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="chat-messages" id="chatMessages">
+                <!-- Welcome Message -->
+                <div class="message assistant welcome">
+                    <div class="message-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="message-content">
+                        <div class="message-text">
+                            <h3>Halo! Saya Doetoez 🤖</h3>
+                            <p>Saya adalah asisten AI dengan ingatan super lengket yang bisa membantu Anda dengan:</p>
+                            <ul>
+                                <li>💬 <strong>Ngobrol & Curhat</strong> - Jadilah teman bicara yang asyik</li>
+                                <li>💻 <strong>Bantuan Ngoding</strong> - Multi bahasa pemrograman</li>
+                                <li>🎨 <strong>Pembuat Gambar</strong> - Generate gambar dari teks</li>
+                                <li>🔊 <strong>Text-to-Speech</strong> - Respons suara natural</li>
+                            </ul>
+                            <p>Apa yang bisa saya bantu hari ini?</p>
+                        </div>
+                        <div class="message-meta">
+                            <span>Hari ini, <span id="currentTime"></span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat-input-container">
+                <div class="input-actions">
+                    <button class="input-action" data-mode="code">
+                        <i class="fas fa-code"></i>
+                        Mode Ngoding
+                    </button>
+                    <button class="input-action" data-mode="image">
+                        <i class="fas fa-image"></i>
+                        Buat Gambar
+                    </button>
+                    <button class="input-action" data-mode="voice">
+                        <i class="fas fa-volume-up"></i>
+                        Aktifkan Suara
+                    </button>
+                    <button class="input-action active" data-mode="memory">
+                        <i class="fas fa-brain"></i>
+                        Ingatan: Aktif
+                    </button>
+                </div>
+
+                <div class="chat-input-wrapper">
+                    <textarea class="chat-input" id="chatInput" placeholder="Ketik pesan untuk Doetoez... (Shift+Enter untuk baris baru)" rows="1"></textarea>
+                    <div class="input-buttons">
+                        <button class="input-btn" id="voiceButton">
+                            <i class="fas fa-microphone"></i>
+                        </button>
+                        <button class="input-btn" id="attachButton">
+                            <i class="fas fa-paperclip"></i>
+                        </button>
+                        <button class="send-btn" id="sendButton">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="input-footer">
+                    <span class="model-info">
+                        Model: <strong>Doetoez-GPT-4</strong> • Memori: <strong>Aktif</strong>
+                    </span>
+                    <span class="shortcut-info">
+                        <kbd>Ctrl</kbd> + <kbd>K</kbd> untuk command palette
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Settings Modal -->
+    <div class="modal" id="settingsModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Pengaturan Doetoez</h2>
+                <button class="modal-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Settings content would go here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/chat.js"></script>
+</body>
+</html>

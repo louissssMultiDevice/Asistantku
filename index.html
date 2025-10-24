@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doetoez - AI Assistant Premium</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <span class="logo-text">Doetoez</span>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link active">Beranda</a>
+                <a href="chat.html" class="nav-link">Chat</a>
+                <a href="docs.html" class="nav-link">API Docs</a>
+                <a href="login.html" class="nav-link auth-btn">Masuk</a>
+                <a href="register.html" class="nav-link auth-btn primary">Daftar</a>
+            </div>
+            <div class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="gradient-text">Doetoez AI Assistant</span><br>
+                        Asisten Pribadi yang Super Cerdas
+                    </h1>
+                    <p class="hero-description">
+                        Doetoez adalah asisten AI dengan ingatan super lengket yang bisa menjadi teman ngobrol, 
+                        partner curhat, asisten ngoding, dan pembuat gambar kreatif. Dilengkapi dengan teknologi 
+                        TTS Google untuk pengalaman yang lebih natural.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="register.html" class="btn btn-primary">
+                            <i class="fas fa-rocket"></i>
+                            Mulai Sekarang
+                        </a>
+                        <a href="#features" class="btn btn-secondary">
+                            <i class="fas fa-play-circle"></i>
+                            Lihat Demo
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <div class="stat-number">10K+</div>
+                            <div class="stat-label">Pengguna Aktif</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">500K+</div>
+                            <div class="stat-label">Percakapan</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">99.8%</div>
+                            <div class="stat-label">Kepuasan</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="ai-chat-preview">
+                        <div class="chat-header-preview">
+                            <div class="chat-avatar">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="chat-info">
+                                <div class="chat-name">Doetoez AI</div>
+                                <div class="chat-status">Online - Siap membantu</div>
+                            </div>
+                        </div>
+                        <div class="chat-messages-preview">
+                            <div class="message user">
+                                <div class="message-content">Bisa bantu buat kode React component?</div>
+                            </div>
+                            <div class="message assistant">
+                                <div class="message-content">Tentu! Saya buatkan component button dengan variants...</div>
+                            </div>
+                            <div class="message user">
+                                <div class="message-content">Bisa generate gambar landscape juga?</div>
+                            </div>
+                            <div class="message assistant typing">
+                                <div class="typing-indicator">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Fitur Unggulan Doetoez</h2>
+                <p>Didesain untuk memberikan pengalaman AI assistant terbaik</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Memori Super Lengket</h3>
+                    <p>Ingatan persisten antar session dengan sistem memori canggih berbasis IndexedDB</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Ingatan kontekstual panjang</li>
+                        <li><i class="fas fa-check"></i> Penyimpanan terenkripsi</li>
+                        <li><i class="fas fa-check"></i> Pemisahan data user</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Asisten Ngoding</h3>
+                    <p>Bantu menulis, debug, dan menjelaskan kode dalam berbagai bahasa pemrograman</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Multi bahasa pemrograman</li>
+                        <li><i class="fas fa-check"></i> Code review & optimasi</li>
+                        <li><i class="fas fa-check"></i> Debugging assistance</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Pembuat Gambar AI</h3>
+                    <p>Generate gambar kreatif berdasarkan deskripsi teks dengan model AI terbaru</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Text-to-image generation</li>
+                        <li><i class="fas fa-check"></i> Multiple art styles</li>
+                        <li><i class="fas fa-check"></i> High resolution output</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-volume-up"></i>
+                    </div>
+                    <h3>Text-to-Speech</h3>
+                    <p>Dukung percakapan natural dengan teknologi TTS Google yang realistis</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Suara natural</li>
+                        <li><i class="fas fa-check"></i> Multiple languages</li>
+                        <li><i class="fas fa-check"></i> Real-time processing</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Teman Curhat</h3>
+                    <p>Menjadi pendengar yang baik dan memberikan saran yang empatik</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Respons empatik</li>
+                        <li><i class="fas fa-check"></i> Privasi terjamin</li>
+                        <li><i class="fas fa-check"></i> Support 24/7</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-sliders-h"></i>
+                    </div>
+                    <h3>API Access</h3>
+                    <p>Integrasikan Doetoez ke aplikasi Anda dengan REST API yang lengkap</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> RESTful API</li>
+                        <li><i class="fas fa-check"></i> ChatGPT & Gemini</li>
+                        <li><i class="fas fa-check"></i> Documentation lengkap</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Siap Mengalami AI Assistant Terbaik?</h2>
+                <p>Bergabung dengan ribuan pengguna yang sudah merasakan manfaat Doetoez</p>
+                <div class="cta-actions">
+                    <a href="register.html" class="btn btn-primary btn-large">
+                        <i class="fas fa-user-plus"></i>
+                        Daftar Gratis
+                    </a>
+                    <a href="chat.html" class="btn btn-secondary btn-large">
+                        <i class="fas fa-comment"></i>
+                        Coba Demo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <span class="logo-text">Doetoez</span>
+                    </div>
+                    <p>AI Assistant premium dengan ingatan super lengket dan kemampuan komunikasi natural.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Produk</h3>
+                    <ul>
+                        <li><a href="chat.html">AI Chat</a></li>
+                        <li><a href="docs.html">API Documentation</a></li>
+                        <li><a href="#features">Fitur</a></li>
+                        <li><a href="#">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Doetoez AI Assistant. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
